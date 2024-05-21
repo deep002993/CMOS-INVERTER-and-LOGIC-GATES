@@ -1,0 +1,98 @@
+# header information:
+Hinverter_deepak|9.07
+
+# Views:
+Vicon|ic
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|Gate InclusionINmocmos()BT|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell inverter_deepak;1{ic}
+Cinverter_deepak;1{ic}||artwork|1698815534517|1698815623476|E
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NTriangle|art@2||-6|1|6|6|RRR|
+NCircle|art@3||-2|1|2|2||
+Nschematic:Bus_Pin|pin@0||-11|1||||
+Nschematic:Wire_Pin|pin@1||-9|1||||
+Nschematic:Bus_Pin|pin@2||1|1|||RR|
+Nschematic:Wire_Pin|pin@3||-1|1|||RR|
+Aschematic:wire|net@0|||0|pin@1||-9|1|pin@0||-11|1
+Aschematic:wire|net@1|||1800|pin@3||-1|1|pin@2||1|1
+Ein||D5G2;|pin@0||U
+Eout||D5G2;|pin@2||U
+X
+
+# Cell inverter_deepak;1{lay}
+Cinverter_deepak;1{lay}||mocmos|1698815691968|1698819128416||DRC_last_good_drc_area_date()G1698819177337|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698819177337
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@1||-14|15|15||R|
+NMetal-1-P-Active-Con|contact@2||6|15|15||R|
+NMetal-1-N-Active-Con|contact@3||-14|-12|5||R|
+NMetal-1-N-Active-Con|contact@4||6|-12|5||R|
+NMetal-1-Polysilicon-1-Con|contact@5||-15|-2||||
+NN-Transistor|nmos@0||-4|-12|7||R||SIM_spice_model(D5G4;X-1;Y-25;)SNMOS
+NMetal-1-Pin|pin@0||6|-1||||
+NMetal-1-Pin|pin@1||12|-1||||
+NPolysilicon-1-Pin|pin@2||-4|-2||||
+Ngeneric:Invisible-Pin|pin@3||-73|15|||||SIM_spice_card(D5G4;)S[vdd vdd 0 dc 1.8,vin in 0 pulse (0 1.8 0 1n 10n 20n),.dc vin 0 1.8 0.1m,".include C:\\Users\\deep\\Documents\\ELECTRIC\\180nm.txt"]
+NP-Transistor|pmos@0||-4|15|17||RRR||SIM_spice_model(D5G4;Y24;)SPMOS
+NMetal-1-P-Well-Con|substr@1||-7|-27|15|||
+NMetal-1-N-Well-Con|well@0||-6|34|15|||
+AN-Active|net@0|||S0|nmos@0|diff-top|-7.75|-12|contact@3||-14|-12
+AN-Active|net@1|||S0|contact@4||6|-12|nmos@0|diff-bottom|-0.25|-12
+AP-Active|net@2|||S0|contact@2||6|15|pmos@0|diff-top|-0.25|15
+AP-Active|net@3|||S1800|contact@1||-14|15|pmos@0|diff-bottom|-7.75|15
+AMetal-1|net@4||1|S900|contact@3||-14|-12|substr@1||-14|-27
+AMetal-1|net@6||1|S900|contact@2||6|15|pin@0||6|-1
+AMetal-1|net@7||1|S900|pin@0||6|-1|contact@4||6|-12
+AMetal-1|net@8||1|S1800|pin@0||6|-1|pin@1||12|-1
+APolysilicon-1|net@10|||S900|pmos@0|poly-right|-4|3|pin@2||-4|-2
+APolysilicon-1|net@11|||S900|pin@2||-4|-2|nmos@0|poly-right|-4|-5
+APolysilicon-1|net@12|||S0|pin@2||-4|-2|contact@5||-15|-2
+AMetal-1|net@13||1|S2700|contact@1||-14|15|well@0||-14|34
+Egnd||D5G4;X-1;Y-6;|substr@1||U
+Ein||D5G4;X-5;Y1;|contact@5||U
+Eout||D5G4;X5;|pin@1||U
+Evdd||D5G4;X17;Y6;|well@0||U
+X
+
+# Cell inverter_deepak;1{sch}
+Cinverter_deepak;1{sch}||schematic|1698813077559|1698815642266|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-36|15||||
+NOff-Page|conn@1||-10|15||||
+NGround|gnd@0||-20|6||||
+Iinverter_deepak;1{ic}|inverter@0||2|24|||D5G4;
+N4-Port-Transistor|nmos-4@0||-22|11|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;Y-7;)SNMOS
+NWire_Pin|pin@0||-26|20||||
+NWire_Pin|pin@1||-26|11||||
+NWire_Pin|pin@2||-19|21||||
+NWire_Pin|pin@3||-19|22||||
+NWire_Pin|pin@4||-19|10||||
+NWire_Pin|pin@5||-19|9||||
+NWire_Pin|pin@6||-26|15||||
+NWire_Pin|pin@7||-20|15||||
+Ngeneric:Invisible-Pin|pin@8||-41|23|||||SIM_spice_card(D5G1;)S[vdd vdd 0 dc 1.8,vin in 0 pulse (0 1.8 0 1n 10n 20n),.dc vin 0 1.8 0.1m,".include C:\\Users\\deep\\Documents\\ELECTRIC\\180nm.txt"]
+N4-Port-Transistor|pmos-4@0||-22|20|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D20.0|SIM_spice_model(D5G1;Y-7;)SPMOS
+NPower|pwr@0||-20|27||||
+Awire|net@1|||0|pmos-4@0|g|-23|20|pin@0||-26|20
+Awire|net@3|||1800|pin@1||-26|11|nmos-4@0|g|-23|11
+Awire|net@4|||1800|pmos-4@0|b|-20|21|pin@2||-19|21
+Awire|net@5|||2700|pin@2||-19|21|pin@3||-19|22
+Awire|net@6|||0|pin@3||-19|22|pmos-4@0|s|-20|22
+Awire|net@7|||1800|nmos-4@0|b|-20|10|pin@4||-19|10
+Awire|net@8|||900|pin@4||-19|10|pin@5||-19|9
+Awire|net@9|||0|pin@5||-19|9|nmos-4@0|s|-20|9
+Awire|net@10|||900|pin@0||-26|20|pin@6||-26|15
+Awire|net@11|||900|pin@6||-26|15|pin@1||-26|11
+Awire|net@12|||1800|conn@0|y|-34|15|pin@6||-26|15
+Awire|net@13|||900|pmos-4@0|d|-20|18|pin@7||-20|15
+Awire|net@14|||900|pin@7||-20|15|nmos-4@0|d|-20|13
+Awire|net@15|||0|conn@1|a|-12|15|pin@7||-20|15
+Awire|net@16|||2700|gnd@0||-20|8|nmos-4@0|s|-20|9
+Awire|net@17|||900|pwr@0||-20|27|pmos-4@0|s|-20|22
+Ein||D5G2;|conn@0|a|U
+Eout||D5G2;|conn@1|a|U
+X

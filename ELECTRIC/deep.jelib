@@ -1,0 +1,83 @@
+# header information:
+Hdeep|9.07
+
+# Views:
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|Gate InclusionINmocmos()BT|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell deep;1{lay}
+Cdeep;1{lay}||mocmos|1698903032365|1698904417167||DRC_last_good_drc_area_date()G1698904296237|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698904296237
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-18|14|15||R|
+NMetal-1-P-Active-Con|contact@2||2|14|15||R|
+NMetal-1-N-Active-Con|contact@3||-18|-13|5||R|
+NMetal-1-N-Active-Con|contact@4||2|-13|5||R|
+NMetal-1-Polysilicon-1-Con|contact@5||-22|-3||||
+NN-Transistor|nmos@0||-8|-13|7||R||SIM_spice_model(D5G4;X3;Y-36;)SNMOS
+NMetal-1-Pin|pin@0||2|-2||||
+NMetal-1-Pin|pin@1||8|-2||||
+NPolysilicon-1-Pin|pin@2||-8|-3||||
+Ngeneric:Invisible-Pin|pin@3||-79|11|||||SIM_spice_card(D5G4;)S[vdd vdd 0 dc 1.8,vin in 0 pulse (0 1.8 0 1n 10n 20n),.dc vin 0 1.8 0.1m,".include C:\\Users\\deep\\Documents\\ELECTRIC\\180nm.txt"]
+NP-Transistor|pmos@0||-8|14|17||R||SIM_spice_model(D5G4;Y-33;)SPMOS
+NMetal-1-P-Well-Con|substr@0||-11|-25|15|||
+NMetal-1-N-Well-Con|well@0||-11|31|15|||
+AP-Active|net@0|||S1800|pmos@0|diff-bottom|-4.25|14|contact@2||2|14
+AP-Active|net@1|||S1800|contact@0||-18|14|pmos@0|diff-top|-11.75|14
+AN-Active|net@2|||S0|nmos@0|diff-top|-11.75|-13|contact@3||-18|-13
+AN-Active|net@3|||S1800|nmos@0|diff-bottom|-4.25|-13|contact@4||2|-13
+AMetal-1|net@6||1|S900|contact@2||2|14|pin@0||2|-2
+AMetal-1|net@7||1|S900|pin@0||2|-2|contact@4||2|-13
+AMetal-1|net@8||1|S1800|pin@0||2|-2|pin@1||8|-2
+APolysilicon-1|net@9|||S900|pmos@0|poly-left|-8|2|pin@2||-8|-3
+APolysilicon-1|net@10|||S900|pin@2||-8|-3|nmos@0|poly-right|-8|-6
+APolysilicon-1|net@11|||S0|pin@2||-8|-3|contact@5||-22|-3
+AMetal-1|net@12||1|S900|contact@3||-18|-13|substr@0||-18|-25
+AMetal-1|net@13||1|S900|well@0||-18|31|contact@0||-18|14
+Egnd||D5G2;|substr@0||U
+Ein||D5G2;X-7;|contact@5||U
+Eout||D5G2;|pin@1||U
+Evdd||D5G2;|well@0||U
+X
+
+# Cell deep;1{sch}
+Cdeep;1{sch}||schematic|1698902031890|1698904277853|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@2||-27|12||||
+NOff-Page|conn@3||-11|12||||
+NGround|gnd@0||-17|2||||
+N4-Port-Transistor|nmos-4@0||-18|7|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;Y-8;)SNMOS
+NWire_Pin|pin@0||-15|18||||
+NWire_Pin|pin@1||-15|19||||
+NWire_Pin|pin@2||-15|6||||
+NWire_Pin|pin@3||-15|5||||
+NWire_Pin|pin@4||-21|17||||
+NWire_Pin|pin@5||-21|12||||
+NWire_Pin|pin@6||-21|7||||
+NWire_Pin|pin@7||-16|12||||
+NWire_Pin|pin@8||-17|19||||
+Ngeneric:Invisible-Pin|pin@9||-38|18|||||SIM_spice_card(D5G1;)S[vdd vdd 0 dc 1.8,vin in 0 pulse (0 1.8 0 1n 10n 20n),.dc vin 0 1.8 0.1m,".include C:\\Users\\deep\\Documents\\ELECTRIC\\180nm.txt"]
+N4-Port-Transistor|pmos-4@0||-18|17|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D20.0|SIM_spice_model(D5G1;X-1;Y-7;)SPMOS
+NPower|pwr@0||-17|21||||
+Awire|net@0|||1800|pmos-4@0|b|-16|18|pin@0||-15|18
+Awire|net@1|||2700|pin@0||-15|18|pin@1||-15|19
+Awire|net@2|||0|pin@1||-15|19|pmos-4@0|s|-16|19
+Awire|net@3|||1800|nmos-4@0|b|-16|6|pin@2||-15|6
+Awire|net@4|||900|pin@2||-15|6|pin@3||-15|5
+Awire|net@5|||0|pin@3||-15|5|nmos-4@0|s|-16|5
+Awire|net@7|||0|pmos-4@0|g|-19|17|pin@4||-21|17
+Awire|net@8|||900|pin@4||-21|17|pin@5||-21|12
+Awire|net@9|||900|pin@5||-21|12|pin@6||-21|7
+Awire|net@10|||1800|pin@6||-21|7|nmos-4@0|g|-19|7
+Awire|net@11|||0|pin@5||-21|12|conn@2|y|-25|12
+Awire|net@12|||2700|nmos-4@0|d|-16|9|pin@7||-16|12
+Awire|net@13|||2700|pin@7||-16|12|pmos-4@0|d|-16|15
+Awire|net@14|||1800|pin@7||-16|12|conn@3|a|-13|12
+Awire|net@15|||0|pmos-4@0|s|-16|19|pin@8||-17|19
+Awire|net@16|||900|pwr@0||-17|21|pin@8||-17|19
+Awire|net@17|||2250|gnd@0||-17|4|nmos-4@0|s|-16|5
+Ein||D5G2;|conn@2|a|U
+Eout||D5G2;|conn@3|y|U
+X

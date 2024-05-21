@@ -1,0 +1,56 @@
+# header information:
+Hvikas|9.07
+
+# Views:
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|Gate InclusionINmocmos()BT|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell vikas;1{lay}
+Cvikas;1{lay}||mocmos|1698905510887|1698906124822|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-10|15|15||R|
+NMetal-1-P-Active-Con|contact@1||10|15|15||R|
+NP-Transistor|pmos@0||0|15|17||R|
+AP-Active|net@0|||S1800|contact@0||-10|15|pmos@0|diff-top|-3.75|15
+AP-Active|net@1|||S1800|pmos@0|diff-bottom|3.75|15|contact@1||10|15
+X
+
+# Cell vikas;1{sch}
+Cvikas;1{sch}||schematic|1698904587986|1698905457917|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-17|11||||
+NOff-Page|conn@1||7|11||||
+NGround|gnd@0||-2|2||||
+N4-Port-Transistor|nmos-4@0||-4|7|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;Y-8;)SNMOS
+NWire_Pin|pin@2||-8|16||||
+NWire_Pin|pin@3||-8|7||||
+NWire_Pin|pin@6||0|17||||
+NWire_Pin|pin@7||0|18||||
+NWire_Pin|pin@8||0|6||||
+NWire_Pin|pin@9||0|5||||
+NWire_Pin|pin@10||-8|11||||
+NWire_Pin|pin@11||-2|11||||
+N4-Port-Transistor|pmos-4@0||-4|16|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D20.0|SIM_spice_model(D5G1;Y-7;)SPMOS
+NPower|pwr@0||-2|22||||
+Awire|net@4|||0|pmos-4@0|g|-5|16|pin@2||-8|16
+Awire|net@6|||1800|pin@3||-8|7|nmos-4@0|g|-5|7
+Awire|net@10|||900|nmos-4@0|s|-2|5|gnd@0||-2|4
+Awire|net@11|||1800|pmos-4@0|b|-2|17|pin@6||0|17
+Awire|net@12|||2700|pin@6||0|17|pin@7||0|18
+Awire|net@13|||0|pin@7||0|18|pmos-4@0|s|-2|18
+Awire|net@14|||1800|nmos-4@0|b|-2|6|pin@8||0|6
+Awire|net@15|||900|pin@8||0|6|pin@9||0|5
+Awire|net@16|||0|pin@9||0|5|nmos-4@0|s|-2|5
+Awire|net@17|||2700|pmos-4@0|s|-2|18|pwr@0||-2|22
+Awire|net@21|||900|pin@2||-8|16|pin@10||-8|11
+Awire|net@22|||900|pin@10||-8|11|pin@3||-8|7
+Awire|net@23|||1800|conn@0|y|-15|11|pin@10||-8|11
+Awire|net@25|||2700|nmos-4@0|d|-2|9|pin@11||-2|11
+Awire|net@26|||2700|pin@11||-2|11|pmos-4@0|d|-2|14
+Awire|net@27|||0|conn@1|a|5|11|pin@11||-2|11
+Ein||D5G2;|conn@0|a|U
+Eout||D5G2;|conn@1|y|U
+X

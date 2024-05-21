@@ -1,0 +1,11 @@
+*\\DC Analysis\\*
+vdd vdd 0 dc 1.8
+vin in 0 pulse (0 1.8 0 1n 10n 20n)
+.dc vin 0 1.8 0.1m
+.include C:\Users\deep\Documents\ELECTRIC\180nm.txt
+
+*\\Transient Analysis\\*
+vdd vdd 0 dc 1.8
+vin in 0 pulse 0 1.8 0 1n 1n .5m 1m
+.tran 2m
+.include C:\Users\deep\Documents\ELECTRIC\180nm.txt
